@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Task Admin</title>
+<title>Jesse's Task Admin</title>
 {% endblock %}
 
 {% block body %}
@@ -10,7 +10,8 @@
 
   <div class="form">
     <form action="/update/{{task.id}}" method="POST">
-      <input type="text" name="content" id="content" value="{{task.content}}">
+      <input type="text" name="content" id="content" placeholder="Task Description" value="{{task.content}}" style="width:60%">
+      <input type="text" name="author" id="author" placeholder="Author" value="{{task.author}}" style="width:20%">
       <input type="submit" value="Update">
     </form>
   </div>
